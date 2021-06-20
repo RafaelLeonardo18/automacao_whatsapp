@@ -1,0 +1,18 @@
+Cris:
+Criar contato
+Pesquisa
+Limpar registro de chamada
+Nova transmissão
+
+Gustavo:
+Iniciar conversa
+Anexar foto
+Anexar video
+
+Rafael:
+Whats web
+Chamada
+Status
+Mensagens favoritas
+
+
