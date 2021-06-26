@@ -11,8 +11,12 @@ public class Teste {
 
     static AppiumDriver<MobileElement> driver;
 
-    public static void main(String[] args) throws Exception {
-        openWhatsApp();
+    public static void main(String[] args) {
+        try {
+            openWhatsApp();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public static void openWhatsApp() throws Exception {
@@ -23,11 +27,8 @@ public class Teste {
         capabilities.setCapability("platformVersion", "7.1.1");
         capabilities.setCapability("appPackage", "com.whatsapp");
         capabilities.setCapability("appActivity", "com.whatsapp.Conversation");
-        capabilities.setCapability("", "");
-        capabilities.setCapability("", "");
         URL url = new URL("http://localhost:4723/wd/hub");
         driver = new AppiumDriver<MobileElement>(url, capabilities);
         System.out.println("Aplicação iniciada");
-
     }
 }
