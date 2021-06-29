@@ -26,11 +26,18 @@ public class Chamada {
         System.out.println("Aplicação iniciada");
     }
 
-    // CT-0001: Validar iniciar chamada por voz - individual
+    // CT-0001: Validar chamada por voz - individual
     @Test
     public void testeChamadaVozIndividual() throws Exception {
         ChamadaPage chamadaPage = new ChamadaPage(driver);
         chamadaPage.iniciarChamadaVozIndividual();
+    }
+
+    // CT-0002: Validar chamada por voz - grupo existente
+    @Test
+    public void testeChamadaVozGrupoExistente() throws Exception {
+        ChamadaPage chamadaPage = new ChamadaPage(driver);
+        chamadaPage.iniciarChamadaVozGrupoExistente();
     }
 
     // CT-0004: Validar iniciar chamada de vídeo

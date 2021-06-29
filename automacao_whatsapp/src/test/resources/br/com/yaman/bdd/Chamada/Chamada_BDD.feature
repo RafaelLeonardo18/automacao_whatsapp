@@ -19,7 +19,7 @@ Contexto:
 
 CT-0001
 Cenário: Validar chamada por voz - individual
-    Quando escolho um contato "contato"
+    Quando escolho um "contato"
     E pressiono o botão com ícone de telefone
     Então inicia uma nova chamada de voz com o "contato" escolhido
 
@@ -27,10 +27,9 @@ CT-0002
 Cenário: Validar chamada por voz - grupo existente
     Quando navego para a aba Conversas
     E seleciono um "Grupo"
-    E pressiono o botão com ícone de telefone com sinal de + 
-    E seleciono os "contatos" que desejo chamar
     E pressiono o botão com ícone de telefone
-    Então inicia uma nova chamada de voz em grupo com os "contatos" escolhidos
+    E pressiono a opção Chamar
+    Então inicia uma nova chamada de voz em grupo com o grupo selecionado
 
 CT-0003
 Cenário: Validar chamada por voz - novo grupo
