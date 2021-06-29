@@ -39,9 +39,15 @@
        <artifactId>java-client</artifactId>
        <version>7.5.1</version>
     </dependency>
+
+    <dependency>
+			 <groupId>io.cucumber</groupId>
+			 <artifactId>gherkin</artifactId>
+			 <version>19.0.3</version>
+		</dependency>
   </dependencies>
 
-  <dependencyManager>
+  <dependencyManagement>
     <dependencies>
 
       <dependency>
@@ -63,15 +69,8 @@
 			  <scope>test</scope>
 		  </dependency>
 
-      <dependency>
-			  <groupId>io.cucumber</groupId>
-			  <artifactId>gherkin</artifactId>
-			  <version>19.0.3</version>
-		  </dependency>
-
     </dependencies>
-
-  </dependencyManager>
+  </dependencyManagement>
 
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
