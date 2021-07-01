@@ -29,14 +29,14 @@ Cenário: Validar chamada por voz - grupo existente
     E seleciono um "Grupo"
     E pressiono o botão com ícone de telefone
     E pressiono a opção Chamar
-    Então inicia uma nova chamada de voz em grupo com o grupo selecionado
+    Então inicia uma nova chamada de voz em grupo com o "Grupo" selecionado
 
 CT-0003
 Cenário: Validar chamada por voz - novo grupo
     Quando seleciono a opção Nova chamada em grupo
     E seleciono um ou mais "contatos" da lista
     E pressiono o botão com ícone de telefone
-    Então inicia uma nova chamada de voz em grupo com os contatos escolhidos
+    Então inicia uma nova chamada de voz em grupo com os "contatos" escolhidos
 
 CT-0004
 Cenário: Validar chamada de vídeo - individual

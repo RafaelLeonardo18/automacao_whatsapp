@@ -1,7 +1,10 @@
 {
     "java.configuration.updateBuildConfiguration": "interactive",
+    "editor.formatOnSave": false,
     "cucumberautocomplete.steps": [
         "test/resources/br/com/yaman/steps/*.java"
     ],
-    "cucumberautocomplete.strictGherkinCompletion": true
+    "cucumberautocomplete.strictGherkinCompletion": true,
+    "editor.autoIndent": "none",
+    "editor.detectIndentation": false
 }

@@ -1,6 +1,7 @@
 package br.com.yaman.testes;
 
 import java.net.URL;
+import java.util.concurrent.TimeUnit;
 
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
@@ -23,6 +24,7 @@ public class Chamada {
         capabilities.setCapability("platformVersion", "7.1.1");
         URL url = new URL("http://localhost:4723/wd/hub");
         driver = new AndroidDriver(url, capabilities);
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         System.out.println("Aplicação iniciada");
     }
 
@@ -40,11 +42,25 @@ public class Chamada {
         chamadaPage.iniciarChamadaVozGrupoExistente();
     }
 
-    // CT-0004: Validar iniciar chamada de vídeo
+    // CT-0003 - Validar chamada por voz - novo grupo
+    @Test
+    public void testeChamadaVozNovoGrupo() throws Exception {
+        ChamadaPage chamadaPage = new ChamadaPage(driver);
+        chamadaPage.iniciarChamadaVozNovoGrupo();
+    }
+
+    // CT-0004: Validar chamada de vídeo - individual
     @Test
     public void testeChamadaVideoIndividual() throws Exception {
         ChamadaPage chamadaPage = new ChamadaPage(driver);
         chamadaPage.iniciarChamadaVideoIndividual();
+    }
+
+    // CT-0005: Validar chamada de vídeo - grupo existente
+    @Test
+    public void testeChamadaVideoGrupoExistente() throws Exception {
+        ChamadaPage chamadaPage = new ChamadaPage(driver);
+        chamadaPage.iniciarChamadaVideoGrupoExistente();
     }
 
     // Encerramento do driver
